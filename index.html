@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gridoo Reminders: email reminders from Google Sheets</title>
+<meta name="description" content="List your dates in Google Sheets. Get a clean email a few days before each one, even when the sheet is closed.">
+<style>
+  :root{--bg:#fbfaf7;--card:#fff;--ink:#1d1d1b;--muted:#5d5d58;--line:#e6e3dc;--accent:#1f7a4d;--accent-ink:#fff;--soft:#eaf4ee}
+  @media (prefers-color-scheme: dark){:root{--bg:#121412;--card:#1b1e1b;--ink:#ecebe6;--muted:#a3a39b;--line:#2c302c;--accent:#4cc28a;--accent-ink:#0b1a12;--soft:#1c2a22}}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px}
+  header{padding:22px 0;font-weight:700;letter-spacing:-.01em}
+  .hero{padding:36px 0 28px}
+  h1{font-size:clamp(30px,5vw,46px);line-height:1.12;letter-spacing:-.02em;margin:0 0 16px}
+  .lead{font-size:19px;color:var(--muted);max-width:620px;margin:0 0 26px}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:650;padding:14px 22px;border-radius:10px}
+  .note{font-size:14px;color:var(--muted);margin-top:10px}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:34px 0}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+  .card h3{margin:0 0 6px;font-size:17px}
+  .card p{margin:0;color:var(--muted);font-size:15px}
+  h2{font-size:24px;margin:44px 0 12px;letter-spacing:-.01em}
+  .demo{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .demo table{width:100%;border-collapse:collapse;font-size:15px}
+  .demo th,.demo td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line)}
+  .demo th{background:var(--soft);font-weight:600}
+  .demo tr:last-child td{border-bottom:0}
+  .email{margin-top:14px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:16px 18px;font-size:15px}
+  .email b{display:block;margin-bottom:4px}
+  ol{padding-left:20px} li{margin:6px 0}
+  .cta{background:var(--soft);border-radius:14px;padding:28px;margin:48px 0 24px;text-align:center}
+  footer{border-top:1px solid var(--line);padding:22px 0 40px;font-size:14px;color:var(--muted)}
+  @media (max-width:520px){.demo .hide-sm{display:none}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>📅 Gridoo Reminders</header>
+
+  <section class="hero">
+    <h1>Never miss a date in your spreadsheet again.</h1>
+    <p class="lead">Keep your bills, contract renewals and licence expiries in Google Sheets. Gridoo Reminders emails you a few days before each one. It runs on Google's servers, so it works even when your sheet is closed.</p>
+    <a class="btn" href="https://forms.gle/atcN7dsmZySix3cX9" target="_blank" rel="noopener">Join the waitlist (free)</a>
+    <p class="note">Early members get the paid plan free for 3 months. No credit card.</p>
+  </section>
+
+  <div class="grid">
+    <div class="card"><h3>Works with the sheet closed</h3><p>Reminders are checked every morning in the background. You don't need to open anything.</p></div>
+    <div class="card"><h3>Emails that look professional</h3><p>Clean, readable reminders you can forward to a client or colleague without embarrassment.</p></div>
+    <div class="card"><h3>Minimal permissions</h3><p>It only reads the one sheet you choose and sends email to addresses you list. Nothing else in your Drive.</p></div>
+    <div class="card"><h3>Set up in two minutes</h3><p>Pick the date column, choose "3 days before", done. No formulas or scripts.</p></div>
+  </div>
+
+  <h2>How it works</h2>
+  <div class="demo">
+    <table>
+      <tr><th>What</th><th>Date</th><th class="hide-sm">Remind</th><th class="hide-sm">Email to</th></tr>
+      <tr><td>Office lease renewal</td><td>2027-01-31</td><td class="hide-sm">14 days before</td><td class="hide-sm">me@example.com</td></tr>
+      <tr><td>Business insurance</td><td>2026-12-15</td><td class="hide-sm">7 days before</td><td class="hide-sm">me@example.com</td></tr>
+      <tr><td>Driver's licence</td><td>2027-03-02</td><td class="hide-sm">30 days before</td><td class="hide-sm">me@example.com</td></tr>
+    </table>
+  </div>
+  <div class="email"><b>Reminder: Business insurance is due in 7 days (Dec 15)</b>From your sheet "Company dates". Open the sheet to see details.</div>
+
+  <ol>
+    <li>Install the add-on in Google Sheets.</li>
+    <li>Choose the column with your dates and how many days before you want a heads-up.</li>
+    <li>Close the sheet. Reminders arrive by email on time.</li>
+  </ol>
+
+  <div class="cta">
+    <h2 style="margin-top:0">Want it when it launches?</h2>
+    <p>Join the waitlist and tell us what you'd use it for. We'll email you once, when it's ready.</p>
+    <a class="btn" href="https://forms.gle/atcN7dsmZySix3cX9" target="_blank" rel="noopener">Join the waitlist</a>
+  </div>
+
+  <footer>
+    <p><b>Privacy:</b> we only collect what you enter in the waitlist form, and use it only to tell you about Gridoo add-ons. We never sell or share it. To be removed, reply to any email or write to gridoo.apps@gmail.com.</p>
+    <p>Gridoo is an independent project and is not affiliated with Google. Google Sheets is a trademark of Google LLC.</p>
+  </footer>
+</div>
+</body>
+</html>
